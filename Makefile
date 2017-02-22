@@ -15,7 +15,9 @@ all: docker.push
 .PHONY: docker.build
 docker.build:
 	docker build -t $(DOCKER_IMAGE):$(DOCKER_TAG) .
+	docker tag $(DOCKER_IMAGE):$(DOCKER_TAG) $(DOCKER_IMAGE):latest
 
 .PHONY: docker.push
 docker.push: docker.build
 	docker push $(DOCKER_IMAGE):$(DOCKER_TAG)
+	docker push $(DOCKER_IMAGE):latest

@@ -6,7 +6,7 @@ APP_ID = /redirect-server
 .PHONY: help
 help:
 	@echo "Please choose one of the following targets:"
-	@echo "  all, docker.build, docker.push, marathon.deploy, marathon.update, clean"
+	@echo "  all, docker.build, docker.push, clean"
 	@exit 0
 
 .PHONY: all
